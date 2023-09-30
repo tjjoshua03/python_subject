@@ -17,4 +17,4 @@ for char in x:                              #x안에서 문자열
         
 print("lowercase : ", lowercase_count)
 
-#lowercase_count = sum(1 for char in input_string if char.islower())
+#lowercase_count = sum(1 for char in x if char.islower())
