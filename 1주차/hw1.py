@@ -13,8 +13,8 @@ lowercase_count = 0
 
 for char in x:                              #x안에서 문자열
     if char.islower():                      #문자열 안에 소문자가 있으면
-        lowercase_count += 1                #1올리세요
+        lowercase_count += 1                #1올리세요!
         
 print("lowercase : ", lowercase_count)
 
-#lowercase_count = sum(1 for char in x if char.islower())
+#lowercase_count = sum(1 for char in x if char.islower())s
