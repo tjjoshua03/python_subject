@@ -12,8 +12,5 @@ result = generateDictionary(n)
 
 
 print("생성된 딕셔너리:")
-for word, meaning in result.items():
-    print(f"{word}: {meaning}")
-
-print(dictionary
-      )
+for key in result:
+    print(result[key])
