@@ -1,16 +1,32 @@
-def generateDictionary(n):
-    dictionary = {}  
-    for i in range(n):
-        word = input("단어 입력: ") 
-        meaning = input("뜻 입력: ") 
-        dictionary[word] = meaning  
+def generateDictionary(x):
+    Dictionary = {}
+    for i in range(x):
+        word = str(input("Input word: "))
+        description = str(input("Input description: "))
+        Dictionary[word] = description
+    return Dictionary
 
-    return dictionary
+num = int(input("Input the number of words: "))
+KorDic = generateDictionary(num)
+print(KorDic)
 
-n = int(input("단어 개수 입력: ")) 
-result = generateDictionary(n)  
+def translateDictionary(dic):
+    EngDic = {}
+    for key in dic.keys():
+        print("Description: ",dic[key])
+        EngWord = input("Input new word: ")
+        EngDic[EngWord] = dic[key]
+    return EngDic
 
+EngDic = translateDictionary(KorDic)
+print(EngDic)
 
-print("생성된 딕셔너리:")
-for key in result:
-    print(result[key])
+def searchEngine(dic):
+    search = input("Input description for seearch: ")
+    for findword in dic.keys():
+        if search in dic[findword]:
+            return(findword)
+        
+while(1):
+    search = searchEngine(EngDic)
+    print(search)
