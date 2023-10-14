@@ -19,7 +19,7 @@ class Rectange(Shape):
         return self.area
     
     def getperimeter(self):
-        self.pertimeter = (self.width * 2) + (self.length * 2)
+        self.pertimeter = (self.width + self.length) * 2
         return self.pertimeter
     
     def __str__(self):
@@ -53,13 +53,35 @@ class Circle(Shape):
         self.r = r
         
     def getarea(self):
-        self.area = pi * self.r * self.r
+        self.area = Circle.pi * self.r * self.r
         return self.area
     
     def getperimeter(self):
-        self.pertimeter = 2 * pi * self.r
+        self.pertimeter = 2 * Circle.pi * self.r
         return self.pertimeter
     
     def __str__(self):
         self.mystr = "I am a circle with" + str(self.r) + "as radius and" + self.area + "as area and" + self.pertimeter + "as perimeter"
         return self.mystr
+    
+class Square(Rectange):
+    def __init__(self, length):
+        self.length = length
+        
+    def getarea(self):
+        self.area = self.length * self.length
+        return self.area
+    
+    def getperimeter(self):
+        self.pertimeter = self.length * 4
+        return self.pertimeter
+    
+    def __str__(self):
+        self.mystr = "I am a square with " + str(self.length) + " as a side"
+        return self.mystr
+    
+    
+#test code    
+square_instance = Square(4)
+result = square_instance.__str__()
+print(result)
